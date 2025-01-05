@@ -280,21 +280,12 @@
                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                         <button type="reset" class="btn btn-dark">Reset</button>
                     </form>
-
-                    <!-- Result Display -->
-                    <div id="result" style="display:none;">
-                        <h4>Prediksi:</h4>
-                        <p id="classification-result"></p>
-                        <a href="{{ route('cek-ginjal.hasil-cek', ['id' => $id]) }}" id="view-result-link"
-                            class="btn btn-info">Lihat Hasil Cek</a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
+    {{-- <script>
         document.getElementById('cek-ginjal-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -326,5 +317,5 @@
                     alert('Terjadi kesalahan: ' + error);
                 });
         });
-    </script>
+    </script> --}}
 @endsection

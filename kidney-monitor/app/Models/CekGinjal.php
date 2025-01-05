@@ -10,6 +10,8 @@ class CekGinjal extends Model
     use HasFactory;
 
     protected $table = 'cek_ginjal';
+    protected $primaryKey = 'cek_id';
+    public $timestamps = true;
 
     protected $fillable = [
         'user_id',
@@ -20,26 +22,27 @@ class CekGinjal extends Model
         'bu',
         'htn',
         'al',
-        'sc',
-        'dm',
         'su',
+        'sc',
         'sod',
-        'cad',
-        'rbc',
         'pot',
-        'appet',
+        'rbc',
         'pc',
-        'hemo',
-        'pe',
         'pcc',
-        'pvc',
-        'ane',
         'ba',
-        'wc'
+        'hemo',
+        'pcv',
+        'wc',
+        'dm',
+        'cad',
+        'appet',
+        'pe',
+        'ane',
+        'classification',
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
